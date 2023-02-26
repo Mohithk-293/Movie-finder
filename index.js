@@ -2,7 +2,7 @@ document.querySelector("button").addEventListener("click",function(){
     var movie=document.querySelector("input.search").value;
     
     var xttp=new XMLHttpRequest();
-   xttp.open("GET"," http://www.omdbapi.com/?s="+movie+"&apikey=54e3a25d");
+   xttp.open("GET"," https://www.omdbapi.com/?s="+movie+"&apikey=54e3a25d");
   
     xttp.send();
     xttp.onreadystatechange=function()
@@ -26,7 +26,7 @@ function fetchImdb(tmovie)
 {
 var imdbRating=tmovie.imdbID;
 var request=new XMLHttpRequest();
-request.open("GET","http://www.omdbapi.com/?i="+imdbRating+"&apikey=54e3a25d");
+request.open("GET","https://www.omdbapi.com/?i="+imdbRating+"&apikey=54e3a25d");
 request.send();
 request.onreadystatechange=function()
 {
